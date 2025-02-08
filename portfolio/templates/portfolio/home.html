@@ -57,8 +57,7 @@
             width: 100%;
             padding: 10px 0;
             text-align: center; /* Center footer text */
-            position: fixed; /* Fix the footer at the bottom */
-            bottom: 0; /* Align to the bottom */
+            position: relative; /* Change to relative for better layout */
         }
         .section-content {
             max-width: 800px; /* Limit the width of sections */
@@ -94,6 +93,42 @@
         }
         .navigation button:hover {
             background: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header img {
+                width: 100%; /* Responsive image */
+                height: auto; /* Maintain aspect ratio */
+            }
+            section {
+                padding: 20px; /* Less padding on smaller screens */
+            }
+            .section-content {
+                padding: 10px; /* Less padding inside content */
+            }
+            .navigation {
+                left: 10px; /* Adjust position for smaller screens */
+            }
+            .navigation button {
+                width: 100%; /* Full width buttons */
+                padding: 15px; /* Increase padding for better touch targets */
+            }
+            h2 {
+                font-size: 1.5em; /* Adjust heading size */
+            }
+            p, ul {
+                font-size: 1em; /* Adjust paragraph size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.2em; /* Further adjust heading size */
+            }
+            p, ul {
+                font-size: 0.9em; /* Further adjust paragraph size */
+            }
         }
     </style>
 </head>
