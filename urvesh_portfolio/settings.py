@@ -13,7 +13,7 @@ SECRET_KEY = config('SECRET_KEY', default='your-default-secret-key')  # Use an e
 DEBUG = False  # Set to False for production
 
 # Allowed hosts
-ALLOWED_HOSTS = ['your-app-name.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['portfolio.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'urvesh_portfolio.wsgi.application'  # Replace with your proj
 
 # Database
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))  # Use environment variable for database URL
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL', 'sqlite:///db.sqlite3')) # Use environment variable for database URL
 }
 
 # Password validation
