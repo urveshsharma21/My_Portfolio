@@ -13,7 +13,6 @@ SECRET_KEY = config('SECRET_KEY', default='your-default-secret-key')  # Use an e
 DEBUG = False  # Set to False for production
 
 # Allowed hosts
-ALLOWED_HOSTS = ['portfolio.onrender.com', 'localhost', '127.0.0.1']
 ALLOWED_HOSTS = ['my-portfolio-tfk5.onrender.com']
 
 # Application definition
