@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urvesh Sharma's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Dark background */
+            color: #ffffff; /* White text */
+            overflow-y: scroll; /* Enable vertical scrolling */
+        }
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack sections vertically */
+            height: auto; /* Allow height to adjust based on content */
+        }
+        section {
+            min-height: 100vh; /* Full height for each section */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px; /* Increased padding for better spacing */
+            box-sizing: border-box; /* Include padding in height/width calculations */
+        }
+        header {
+            background: #333; /* Darker header */
+            padding: 20px 0;
+            text-align: center;
+        }
+        .about {
+            background: #2c3e50; /* Dark blue section */
+        }
+        .education {
+            background: #34495e; /* Darker blue section */
+        }
+        .skills {
+            background: #2ecc71; /* Green section */
+        }
+        .projects {
+            background: #e74c3c; /* Red section */
+        }
+        .certifications {
+            background: #f39c12; /* Orange section */
+        }
+        .languages {
+            background: #8e44ad; /* Purple section */
+        }
+        footer {
+            background: #333; /* Dark footer */
+            width: 100%;
+            padding: 10px 0;
+            text-align: center; /* Center footer text */
+            position: fixed; /* Fix the footer at the bottom */
+            bottom: 0; /* Align to the bottom */
+        }
+        .section-content {
+            max-width: 800px; /* Limit the width of sections */
+            margin: auto; /* Center the content */
+            padding: 20px; /* Padding inside the content */
+            background: rgba(255, 255, 255, 0.1); /* Slightly transparent background for contrast */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        }
+        h2 {
+            margin-bottom: 20px; /* Space below headings */
+        }
+        p, ul {
+            font-size: 1.2em; /* Slightly larger font for better readability */
+            line-height: 1.5; /* Increase line height for better spacing */
+        }
+        .navigation {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        .navigation button {
+            background: #3498db; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 10px 0;
+            transition: background 0.3s ease;
+        }
+        .navigation button:hover {
+            background: #2980b9; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Urvesh Sharma</h1>
+            <p> Information Technology Student & Aspiring Developer</p>
+        </div>
+        <img src="{% static 'portfolio/images/project1.jpeg' %}" height="400" width="300" class="header-image" alt="Urvesh Sharma">
+    </header>
+
+    <div class="container">
+        <section class="about">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>Welcome to my portfolio! I am an aspiring developer with a passion for technology and innovation.</p>
+            </div>
+        </section>
+
+        <section class="education">
+            <div class="section-content">
+                <h2>Education</h2>
+                <p><strong>B.Tech in Information Technology</strong><br>
+                Astral Institute of Technology and Research, Indore, Madhya Pradesh<br>
+                Graduation : 2024 | CGPA: 7.0</p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="section-content">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Java (Core & Advanced)</li>
+                    <li>Python</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Bootstrap</li>
+                    <li>MySQL</li>
+                    <li>JDBC, Servlets, JSP, OOPM, Apache Tomcat</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="section-content">
+                <h2>Projects</h2>
+                <p>Here are some of the projects I have worked on:</p>
+                <ul>
+                    <li><strong>Web Application:</strong> Developed using JEE (JDBC, Servlets, JSP) with Java as the programming language.</li>
+                    <li><strong>Job Portal:</strong> Created a web-based application to manage job postings and candidate applications.</li>
+                    <li><strong>Mini Amazon Project:</strong> Designed and implemented a mock e-commerce platform using CSS for styling.</li>
+                    <li><strong>Advanced Java Login Form:</strong> Developed a secure login and registration system using Advanced Java techniques.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="certifications">
+            <div class="section-content">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Java Full Stack by The Prime Step Training and Placement Institute Indore</li>
+                    <li>Business Analytics Course By Relevel</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="languages">
+            <div class="section-content">
+                <h2>Languages</h2>
+                <p>English: Proficient</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div>
+            <p>Contact: <a href="mailto:urveshsharma30@gmail.com" style="color: white;">urveshsharma30@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/urvesh-sharma-8340922b4" style="color: white;">View Profile</a></p>
+            <p>GitHub: <a href="https://github.com/urveshsharma21" style="color: white;">View Projects</a></p>
+            <p>Address: 163/1 Malviya Nagar, Near C21 Mall, Indore (M.P) 452010</p>
+            <p>Phone: +917000989791</p>
+        </div>
+    </footer>
+
+    <div class="navigation">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const container = document.querySelector('.container');
+        const totalSlides = document.querySelectorAll('section').length;
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlidePosition();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlidePosition();
+        });
+
+        function updateSlidePosition() {
+            container.style.transform = 'translateY(' + (-currentSlide * 100) + 'vh)';
+        }
+    </script>
+</body>
+</html>
