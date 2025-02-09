@@ -15,8 +15,6 @@ DEBUG = False  # Set to False for production
 # Allowed hosts
 ALLOWED_HOSTS = ['my-portfolio-tfk5.onrender.com']
 
-ALLOWED_HOSTS = ['astounding-basbousa-5728f9.netlify.app']
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
